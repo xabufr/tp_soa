@@ -25,4 +25,13 @@ public class UserDAOTest {
 	public void peutRécupérerThomas() {
 		assertEquals("thomas", dao.find(1l).getName());
 	}
+	
+	@Test
+	public void testFindByName() {
+		assertEquals(1, dao.findByName("thomas").getId());
+	}
+	@Test
+	public void testFindByInvalidName() {
+		assertNull(dao.findByName("unexistant"));
+	}
 }

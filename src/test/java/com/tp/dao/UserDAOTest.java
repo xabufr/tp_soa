@@ -30,6 +30,7 @@ public class UserDAOTest {
 	public void testFindByName() {
 		assertEquals(1, dao.findByName("thomas").getId());
 	}
+
 	@Test
 	public void testFindByInvalidName() {
 		assertNull(dao.findByName("unexistant"));
